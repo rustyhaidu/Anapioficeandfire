@@ -1,0 +1,175 @@
+package app.clau.anapioficeandfire.models;
+
+/**
+ * Created by Claudiu on 4/19/2017.
+ */
+
+public class Character {
+    private String url;
+    private String name;
+    private String gender;
+    private String culture;
+    private String born;
+    private String died;
+    private String father;
+    private String mother;
+    private String spouse;
+    private String[] titles;
+    private String[] aliases;
+    private String[] allegiances;
+    private String[] book;
+    private String[] povBook;
+    private String[] tvSeries;
+    private String[] playedBy;
+
+    public Character(){
+
+    }
+
+    public Character(String url, String name, String gender, String culture, String born, String died, String father, String mother, String spouse, String[] titles, String[] aliases, String[] allegiances, String[] book, String[] povBook, String[] tvSeries, String[] playedBy) {
+        this.url = url;
+        this.name = name;
+        this.gender = gender;
+        this.culture = culture;
+        this.born = born;
+        this.died = died;
+        this.father = father;
+        this.mother = mother;
+        this.spouse = spouse;
+        this.titles = titles;
+        this.aliases = aliases;
+        this.allegiances = allegiances;
+        this.book = book;
+        this.povBook = povBook;
+        this.tvSeries = tvSeries;
+        this.playedBy = playedBy;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getCulture() {
+        return culture;
+    }
+
+    public void setCulture(String culture) {
+        this.culture = culture;
+    }
+
+    public String getBorn() {
+        return born;
+    }
+
+    public void setBorn(String born) {
+        this.born = born;
+    }
+
+    public String getDied() {
+        return died;
+    }
+
+    public void setDied(String died) {
+        this.died = died;
+    }
+
+    public String getFather() {
+        return father;
+    }
+
+    public void setFather(String father) {
+        this.father = father;
+    }
+
+    public String getMother() {
+        return mother;
+    }
+
+    public void setMother(String mother) {
+        this.mother = mother;
+    }
+
+    public String getSpouse() {
+        return spouse;
+    }
+
+    public void setSpouse(String spouse) {
+        this.spouse = spouse;
+    }
+
+    public String[] getTitles() {
+        return titles;
+    }
+
+    public void setTitles(String[] titles) {
+        this.titles = titles;
+    }
+
+    public String[] getAliases() {
+        return aliases;
+    }
+
+    public void setAliases(String[] aliases) {
+        this.aliases = aliases;
+    }
+
+    public String[] getAllegiances() {
+        return allegiances;
+    }
+
+    public void setAllegiances(String[] allegiances) {
+        this.allegiances = allegiances;
+    }
+
+    public String[] getBook() {
+        return book;
+    }
+
+    public void setBook(String[] book) {
+        this.book = book;
+    }
+
+    public String[] getPovBook() {
+        return povBook;
+    }
+
+    public void setPovBook(String[] povBook) {
+        this.povBook = povBook;
+    }
+
+    public String[] getTvSeries() {
+        return tvSeries;
+    }
+
+    public void setTvSeries(String[] tvSeries) {
+        this.tvSeries = tvSeries;
+    }
+
+    public String[] getPlayedBy() {
+        return playedBy;
+    }
+
+    public void setPlayedBy(String[] playedBy) {
+        this.playedBy = playedBy;
+    }
+}
