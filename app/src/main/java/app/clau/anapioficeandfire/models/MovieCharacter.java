@@ -4,7 +4,7 @@ package app.clau.anapioficeandfire.models;
  * Created by Claudiu on 4/19/2017.
  */
 
-public class Character {
+public class MovieCharacter {
     private String url;
     private String name;
     private String gender;
@@ -22,11 +22,11 @@ public class Character {
     private String[] tvSeries;
     private String[] playedBy;
 
-    public Character(){
+    public MovieCharacter(){
 
     }
 
-    public Character(String url, String name, String gender, String culture, String born, String died, String father, String mother, String spouse, String[] titles, String[] aliases, String[] allegiances, String[] book, String[] povBook, String[] tvSeries, String[] playedBy) {
+    public MovieCharacter(String url, String name, String gender, String culture, String born, String died, String father, String mother, String spouse, String[] titles, String[] aliases, String[] allegiances, String[] book, String[] povBook, String[] tvSeries, String[] playedBy) {
         this.url = url;
         this.name = name;
         this.gender = gender;
