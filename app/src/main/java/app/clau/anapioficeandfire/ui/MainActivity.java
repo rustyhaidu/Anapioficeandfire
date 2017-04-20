@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -118,8 +119,6 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             alertUserAboutError();
                         }
-                    } catch (IOException e) {
-                        Log.e(TAG, "Exception caught", e);
                     } catch (JSONException e) {
                         Log.e(TAG, "Exception caught", e);
                     }
@@ -138,13 +137,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected boolean isOnline() {
+        boolean flag = false;
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = cm.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            return true;
-        } else {
-            return false;
+            flag = true;
         }
+        return flag;
     }
 
     private void alertUserAboutError() {
@@ -157,13 +156,13 @@ public class MainActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                MovieCharacter tappedMovieCharacter= characterList.get(position);
-                String message = "You clicked position "+ position + tappedMovieCharacter.getUrl();
+                MovieCharacter tappedMovieCharacter = characterList.get(position);
+                String message = "You clicked position " + position + " " + tappedMovieCharacter.getUrl();
 
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,DetailedCharacterActivity.class);
+                intent.setClass(MainActivity.this, DetailedCharacterActivity.class);
                 intent.putExtra("position", tappedMovieCharacter);
 
                 startActivity(intent);
@@ -173,11 +172,13 @@ public class MainActivity extends AppCompatActivity {
 
     private class MyListAdapter extends ArrayAdapter<MovieCharacter> {
 
-        public MyListAdapter() {
+        MyListAdapter() {
             super(MainActivity.this, R.layout.item_view, characterList);
         }
 
-        public View getView(int position, View convertView, ViewGroup parent) {
+
+        @NonNull
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             View itemView = convertView;
 
             if (itemView == null) {
