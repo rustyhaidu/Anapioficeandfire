@@ -1,6 +1,7 @@
 package app.clau.anapioficeandfire.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         pb = (ProgressBar) findViewById(R.id.progressBar);
         pb.setVisibility(View.INVISIBLE);
         getContent();
+        registerClickCallBack();
 
     }
 
@@ -98,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         Gson gson = new Gson();
                         for (int i = 0; i < jsonArrayCharacters.length(); i++) {
                             JSONObject object = jsonArrayCharacters.optJSONObject(i);
-                            JsonElement jsonElement = gson.fromJson(object.toString(),JsonElement.class);
+                            JsonElement jsonElement = gson.fromJson(object.toString(), JsonElement.class);
                             MovieCharacter movieCharacter = gson.fromJson(jsonElement, MovieCharacter.class);
                             characterList.add(movieCharacter);
                         }
@@ -149,6 +152,25 @@ public class MainActivity extends AppCompatActivity {
         dialog.show(getFragmentManager(), "error_dialog");
     }
 
+    private void registerClickCallBack() {
+        // ListView list= (ListView) findViewById(R.id.listView);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                MovieCharacter tappedMovieCharacter= characterList.get(position);
+                String message = "You clicked position "+ position + tappedMovieCharacter.getUrl();
+
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,DetailedCharacterActivity.class);
+                intent.putExtra("position", tappedMovieCharacter);
+
+                startActivity(intent);
+            }
+        });
+    }
+
     private class MyListAdapter extends ArrayAdapter<MovieCharacter> {
 
         public MyListAdapter() {
@@ -164,32 +186,13 @@ public class MainActivity extends AppCompatActivity {
             MovieCharacter currentCharacter = characterList.get(position);
 
             TextView displayTextView = (TextView) itemView.findViewById(R.id.displayTextView);
-            String valueName;
-            if (currentCharacter.getName() == ""){
-                //valueName = "EMPTY!";
-                valueName = currentCharacter.getName();
-            }else{
-                valueName = currentCharacter.getName();
-            }
-            displayTextView.setText(valueName);
+            displayTextView.setText(currentCharacter.getName());
 
             TextView playedByTextView = (TextView) itemView.findViewById(R.id.playedByTextView);
-            if (currentCharacter.getCulture() == ""){
-                //valueName = "EMPTY!";
-                valueName = currentCharacter.getCulture();
-            }else{
-                valueName = currentCharacter.getCulture();
-            }
-            playedByTextView.setText(String.valueOf(valueName));
+            playedByTextView.setText(String.valueOf(currentCharacter.getCulture()));
 
             TextView genderTextView = (TextView) itemView.findViewById(R.id.genderTextView);
-            if (currentCharacter.getGender() == ""){
-                //valueName = "EMPTY!";
-                valueName = currentCharacter.getGender();
-            }else{
-                valueName = currentCharacter.getGender();
-            }
-            genderTextView.setText(String.valueOf(valueName));
+            genderTextView.setText(String.valueOf(currentCharacter.getGender()));
 
             return itemView;
         }

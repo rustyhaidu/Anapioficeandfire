@@ -1,10 +1,13 @@
 package app.clau.anapioficeandfire.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Claudiu on 4/19/2017.
+ * This contains The Movie Character Fields
  */
 
-public class MovieCharacter {
+public class MovieCharacter implements Serializable {
     private String url;
     private String name;
     private String gender;
@@ -17,8 +20,8 @@ public class MovieCharacter {
     private String[] titles;
     private String[] aliases;
     private String[] allegiances;
-    private String[] book;
-    private String[] povBook;
+    private String[] books;
+    private String[] povBooks;
     private String[] tvSeries;
     private String[] playedBy;
 
@@ -26,7 +29,7 @@ public class MovieCharacter {
 
     }
 
-    public MovieCharacter(String url, String name, String gender, String culture, String born, String died, String father, String mother, String spouse, String[] titles, String[] aliases, String[] allegiances, String[] book, String[] povBook, String[] tvSeries, String[] playedBy) {
+    public MovieCharacter(String url, String name, String gender, String culture, String born, String died, String father, String mother, String spouse, String[] titles, String[] aliases, String[] allegiances, String[] books, String[] povBooks, String[] tvSeries, String[] playedBy) {
         this.url = url;
         this.name = name;
         this.gender = gender;
@@ -39,8 +42,8 @@ public class MovieCharacter {
         this.titles = titles;
         this.aliases = aliases;
         this.allegiances = allegiances;
-        this.book = book;
-        this.povBook = povBook;
+        this.books = books;
+        this.povBooks = povBooks;
         this.tvSeries = tvSeries;
         this.playedBy = playedBy;
     }
@@ -141,20 +144,20 @@ public class MovieCharacter {
         this.allegiances = allegiances;
     }
 
-    public String[] getBook() {
-        return book;
+    public String[] getBooks() {
+        return books;
     }
 
-    public void setBook(String[] book) {
-        this.book = book;
+    public void setBooks(String[] books) {
+        this.books = books;
     }
 
-    public String[] getPovBook() {
-        return povBook;
+    public String[] getPovBooks() {
+        return povBooks;
     }
 
-    public void setPovBook(String[] povBook) {
-        this.povBook = povBook;
+    public void setPovBooks(String[] povBooks) {
+        this.povBooks = povBooks;
     }
 
     public String[] getTvSeries() {

@@ -3,8 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/customborder"
-    >
+                android:background="@drawable/customborder">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,10 +18,10 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:gravity="center_horizontal"
-            android:hint="blank"
+            android:hint="@string/blankPlaceHolder"
             android:textColor="@android:color/background_light"
             android:textColorHint="@android:color/darker_gray"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/textSize"/>
 
         <TextView
             android:id="@+id/playedByTextView"
@@ -31,10 +30,10 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:gravity="center_horizontal"
-            android:hint="blank"
+            android:hint="@string/blankPlaceHolder"
             android:textColor="@android:color/background_light"
             android:textColorHint="@android:color/darker_gray"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/textSize"/>
 
         <TextView
             android:id="@+id/genderTextView"
@@ -43,9 +42,9 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:gravity="center_horizontal"
-            android:hint="blank"
+            android:hint="@string/blankPlaceHolder"
             android:textColor="@android:color/background_light"
             android:textColorHint="@android:color/darker_gray"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/textSize"/>
     </LinearLayout>
 </LinearLayout>

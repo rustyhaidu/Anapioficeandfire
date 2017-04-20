@@ -4,5 +4,40 @@
     <string name="error_message">There was an Error. Please try Again!</string>
     <string name="error_ok_button_text">OK</string>
     <string name="network_unavailable_message">Network is unavailable!</string>
+    <string name="character_url">CHARACTER URL</string>
+    <string name="characterHintUrl">characterURL</string>
+    <string name="name">NAME</string>
+    <string name="nameValue">name</string>
+    <string name="genderHeader">GENDER</string>
+    <string name="genderValue">gender</string>
+    <string name="cultureHeader">CULTURE</string>
+    <string name="cultureValue">culture</string>
+    <string name="bornHeader">BORN</string>
+    <string name="bornValue">Born</string>
+    <string name="diedHeader">DIED</string>
+    <string name="diedValue">died</string>
+    <string name="titlesHeader">TITLES</string>
+    <string name="titlesValue">Titles</string>
+    <string name="aliasesHeader">ALIASES</string>
+    <string name="aliasesValue">Aliases</string>
+    <string name="fatherHeader">FATHER</string>
+    <string name="fatherValue">Father</string>
+    <string name="motherHeader">MOTHER</string>
+    <string name="motherValue">Mother</string>
+    <string name="spouseValue">Spouse</string>
+    <string name="spouseHeader">SPOUSE</string>
+    <string name="allegiencesHeader">ALLEGIENCES</string>
+    <string name="allegiancesValue">Allegiances</string>
+    <string name="booksValue">books</string>
+    <string name="povbooksHeader">POVBOOKS</string>
+    <string name="tvseriesHeader">TVSERIES</string>
+    <string name="tvseriesValue">tvSeries</string>
+    <string name="playedbyHeader">PLAYEDBY</string>
+    <string name="playedbyValue">playedBy</string>
+    <string name="povbooksValue">povBooks</string>
+    <string name="played_byMainHeader">played by</string>
+    <string name="genderMainHeader">gender</string>
+    <string name="display_nameMainHeader">Display Name</string>
+    <string name="blankPlaceHolder">blank</string>
 
-    </resources>
+</resources>
