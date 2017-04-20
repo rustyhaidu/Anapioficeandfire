@@ -329,7 +329,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="BOOKS"
+            android:text="@string/booksHeader"
             android:background="@drawable/customborder"
             android:textColor="@android:color/holo_green_light"/>
 

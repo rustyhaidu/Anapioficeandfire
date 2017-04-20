@@ -39,5 +39,6 @@
     <string name="genderMainHeader">gender</string>
     <string name="display_nameMainHeader">Display Name</string>
     <string name="blankPlaceHolder">blank</string>
+    <string name="booksHeader">BOOKS</string>
 
 </resources>
