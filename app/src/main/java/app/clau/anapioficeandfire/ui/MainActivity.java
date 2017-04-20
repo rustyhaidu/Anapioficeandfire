@@ -132,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateListView() {
         ArrayAdapter<MovieCharacter> adapter = new MyListAdapter();
-        // ListView list = (ListView)findViewById(R.id.listView);
         list.setAdapter(adapter);
     }
 
