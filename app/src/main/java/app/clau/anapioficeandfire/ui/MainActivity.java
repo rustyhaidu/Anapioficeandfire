@@ -166,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
             TextView displayTextView = (TextView) itemView.findViewById(R.id.displayTextView);
             String valueName;
             if (currentCharacter.getName() == ""){
-                valueName = "EMPTY!";
+                //valueName = "EMPTY!";
+                valueName = currentCharacter.getName();
             }else{
                 valueName = currentCharacter.getName();
             }
@@ -174,7 +175,8 @@ public class MainActivity extends AppCompatActivity {
 
             TextView playedByTextView = (TextView) itemView.findViewById(R.id.playedByTextView);
             if (currentCharacter.getCulture() == ""){
-                valueName = "EMPTY!";
+                //valueName = "EMPTY!";
+                valueName = currentCharacter.getCulture();
             }else{
                 valueName = currentCharacter.getCulture();
             }
@@ -182,7 +184,8 @@ public class MainActivity extends AppCompatActivity {
 
             TextView genderTextView = (TextView) itemView.findViewById(R.id.genderTextView);
             if (currentCharacter.getGender() == ""){
-                valueName = "EMPTY!";
+                //valueName = "EMPTY!";
+                valueName = currentCharacter.getGender();
             }else{
                 valueName = currentCharacter.getGender();
             }

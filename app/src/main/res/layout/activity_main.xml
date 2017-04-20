@@ -6,12 +6,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="app.clau.anapioficeandfire.ui.MainActivity"
-    android:orientation="vertical">
-
-    <ListView
+    android:orientation="vertical"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listView"/>
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_weight="95">
+
+            <TextView
+                android:id="@+id/displayHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/customborder"
+                android:gravity="center_horizontal"
+                android:text="Display Name"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/playedByHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/customborder"
+                android:gravity="center_horizontal"
+                android:text="played by"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/genderHeaderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/customborder"
+                android:gravity="center_horizontal"
+                android:text="gender"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"/>
+
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
