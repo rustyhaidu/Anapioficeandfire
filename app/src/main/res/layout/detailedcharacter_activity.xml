@@ -393,7 +393,8 @@
             android:layout_weight="1"
             android:hint="@string/tvseriesValue"
             android:background="@drawable/customborder"
-            android:textColorHint="@android:color/darker_gray"/>
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/holo_red_light"/>
     </LinearLayout>
 
     <LinearLayout
