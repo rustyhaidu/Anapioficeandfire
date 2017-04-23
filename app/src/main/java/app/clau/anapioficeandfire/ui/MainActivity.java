@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         String apiURL = "https://www.anapioficeandfire.com/api/characters";
 
         if (isOnline()) {
+            toggleRefresh();
             client = new OkHttpClient();
             Request request = new Request.Builder().url(apiURL).build();
             Call call = client.newCall(request);
@@ -112,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     populateListView();
-                                    toggleRefresh();
                                 }
                             });
 
